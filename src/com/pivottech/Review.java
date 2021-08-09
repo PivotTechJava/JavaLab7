@@ -1,24 +1,28 @@
 package com.pivottech;
 
+import java.lang.*;
+
 public class Review {
+
     private String body;
     private String author;
-    private int stars;
+    private Stars stars;
 
-    Review() {
+    public Review() {
         super();
-        this.body = "default body";
-        this.author = "default autho";
-        this.stars = 0;
+        this.body = "";
+        this.author = "";
+        this.stars = Stars.ONE;
     }
 
-    Review(String _body, String _author, int _stars) {
+    public Review(String _body, String _author, Stars stars) {
+
         this.body = _body;
         this.author = _author;
-        this.stars = _stars;
+        this.stars = stars;
     }
 
     public String toString() {
-        return this.body + "---" + this.author + "---" + Integer.toString(this.stars);
+        return "\"" + this.body + "\"" + "\nAuthor: " + this.author + "\nStar Rating: " + this.stars;
     }
 }
