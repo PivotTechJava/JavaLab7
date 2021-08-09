@@ -1,5 +1,6 @@
 package com.pivottech;
 
+// Java Lab 7
 public class Main {
 
     public static void main(String[] args) {
