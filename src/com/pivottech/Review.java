@@ -23,6 +23,6 @@ public class Review {
     }
 
     public String toString() {
-        return "\"" + this.body + "\"" + "\nAuthor: " + this.author + "\nStar Rating: " + this.stars;
+        return "\"" + this.body + "\"" + "\nAuthor: " + this.author + "\nStar Rating: " + this.stars + "\n";
     }
 }
