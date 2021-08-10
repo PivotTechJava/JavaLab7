@@ -8,6 +8,7 @@ public class Main {
 
         Restaurant myRestaurant = new Restaurant("Ruth Chris", Stars.FIVE, Restaurant.$$$);
         Review myReview = new Review("Great!", "Jimmy", Stars.FIVE);
+        //test
 
         myRestaurant.addReview(myReview);
 
