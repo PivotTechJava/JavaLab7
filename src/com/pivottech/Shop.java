@@ -1,29 +1,27 @@
 package com.pivottech;
-
 import java.util.ArrayList;
 
-public class Restaurant {
-
+public class Shop {
     public final static int $ = 1;
     public final static int $$ = 2;
     public final static int $$$ = 3;
 
     private String name;
-    private Stars starRating;
+    private String description;
     private int price;
     private ArrayList<Review> reviews;
 
-    public Restaurant(String name, Stars stars, int price) {
+    public Shop(String name, String description, int price) {
 
         this.name = name;
-        starRating = stars;
+        this.description = description;
         this.price = price;
         this.reviews = new ArrayList<>();
     }
 
-    public Restaurant(String name, Stars stars, int price, ArrayList<Review> reviewArray) {
-        this(name, stars, price); // calls previous constructor
-        this.reviews = new ArrayList<>(reviewArray);
+    public Shop(String name, String description, int price, ArrayList<Review> reviewArr) {
+        this(name, description, price); // calls previous constructor
+        this.reviews = new ArrayList<>(reviewArr);
     }
 
     public void addReview(Review review){
@@ -39,12 +37,11 @@ public class Restaurant {
         else priceStr = "$$$";
 
         String result;
-        result = this.name  + " "+ priceStr + " " + this.starRating +  "\nReviews:\n---------------------";
+        result = this.name  + " - "+ priceStr + " - " + this.description +  "\nReviews:\n---------------------";
 
         for (Review review: this.reviews) {
-            result = result + "\n" + review.toString() + "\n";
+            result += "\n" + review.toString() + "\n";
         }
         return result;
     }
-
 }
