@@ -32,7 +32,9 @@ public class Main {
         amc.removeMovie("Good Boys");
 
         Review review5 = new Review("My favorite location", "Kendra", Stars.FIVE);
+        Review review6 = new Review("Nice!", "Mac", Stars.FOUR);
         amc.addReview(review5);
+        amc.addReview(review6);
 
         System.out.println(amc);
     }
